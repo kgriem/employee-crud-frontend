@@ -1,0 +1,14 @@
+<div>
+  <h2>Employees</h2>
+</div>
+<div>
+  <button class="btn">load employees</button>
+</div>
+<div *ngIf="employees.length > 0">
+  <ul>
+    <li *ngFor="let employee of employees">
+      id: {{ employee.id }}, name: {{ employee.name }}, email:
+      {{ employee.email }}
+    </li>
+  </ul>
+</div>
