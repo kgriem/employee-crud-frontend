@@ -14,7 +14,9 @@ export class EmployeeServiceService {
     return this.httpClient.get<any>(this.url, data);
   }
   getEmployees(): Observable<any[]> {
-    return this.httpClient.get<any[]>(this.url);
+    let newurl = `${this.url}/all`;
+    console.log(newurl);
+    return this.httpClient.get<any[]>(newurl);
   }
   createEmployee(data: any): Observable<any> {
     console.log(data);
